@@ -78,7 +78,7 @@ public class BSTInsertion {
 
         if (node != null) {
 
-            System.out.println(prefix + (isLast ? "!--" : "|==") + node.val); // Use node.val
+            System.out.println(prefix + (isLast ? "!--" : "|==") + node.val);
 
             if (node.left != null || node.right != null) {
 
@@ -110,28 +110,37 @@ public class BSTInsertion {
 
         TreeNode rootRecursive = null;
         System.out.println("\n--- Using Iterative Insertion ---");
+
         int[] values = {50, 30, 20, 70, 40, 60, 80};
+
         for (int val : values) {
+
             System.out.println("---------------------------------------");
             System.out.println("Inserting : " + val);
             System.out.println("---------------------------------------");
+
             root = insertIntoBST_Iterative(root, val);
+
             printTree(root);
         }
+
         System.out.println("Final Iterative BST ... ");
+
         printTree(root);
 
 
         System.out.println("\n--- Using Recursive Insertion ---");
+
         int[] values2 = {50, 30, 20, 70, 40, 60, 80};
 
         for (int val : values2) {
 
-            System.out.println("Inserting : " + val);
+            System.out.println("\nInserting : " + val);
+
             rootRecursive = insertIntoBST_Recursive(rootRecursive, val);
         }
 
-        System.out.println("Final Recursive BST ... ");
+        System.out.println("\nFinal Recursive BST ... ");
 
         printTree(rootRecursive);
     }
